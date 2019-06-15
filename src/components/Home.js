@@ -201,6 +201,7 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Welcome',
+    header: null
   };
  
   render() {
@@ -217,6 +218,7 @@ class HomeScreen extends React.Component {
 class ProfileScreen extends React.Component {
   static navigationOptions = {
     title: 'Second',
+    header: null
   };
   render() {
     const {navigate} = this.props.navigation;
