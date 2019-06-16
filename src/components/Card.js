@@ -1,29 +1,35 @@
 import React from 'react'
-import { View } from 'react-native'
+import { TouchableOpacity, Text, Image} from 'react-native'
 
-const Card = (props) => {
-    return (
-        <View style={styles.containerStyle}>
-            {props.children}
-        </View>
-    )
-}
-
-const styles = {
-    containerStyle: {
-        borderWidth: 1,
-        borderRadius: 2,
-        borderColor: 'grey',
-        borderBottomWidth: 0,
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: 2},
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 1,
-        marginLeft: 5,
-        marginRight: 5,
-        marginTop: 10
+export default class Card extends React.Component {
+    render () {
+        return (
+            <TouchableOpacity style={styles.cards}>
+                <Image style={styles.imageStyle} source={{uri:'https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SY500_CR0,0,337,500_AL_.jpg'}}></Image>
+                <Text style={styles.textStyle}>{this.props.item.title}</Text>
+            </TouchableOpacity>
+        )
     }
 }
 
-export default Card
+const styles = {
+    textStyle: {
+        fontSize: 12,
+        padding: 10
+    },
+    cards: {
+        backgroundColor: 'white',
+        marginBottom: 10,
+        marginLeft: '2%',
+        width: '90%',
+        shadowColor: 'black',
+        shadowOpacity: 0.2,
+        shadowRadius: 1,
+        shadowOffset: {height: 3, width: 3}
+    },
+    imageStyle: {
+        width: '100%',
+        height: 200,
+        resizeMode: 'cover'
+    }
+}
