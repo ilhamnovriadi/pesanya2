@@ -5,6 +5,7 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 // import { Card } from '../components/Card'
 
 class Home extends React.Component {
+  
 
   static navigationOptions = {
     title: 'welcome',
@@ -220,7 +221,10 @@ class Home extends React.Component {
   }
 }
 
+// Class Profil Screen
 class ProfileScreen extends React.Component {
+  
+
   static navigationOptions = {
     title: 'Second',
     header: null
